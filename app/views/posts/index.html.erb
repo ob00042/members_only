@@ -1,0 +1,13 @@
+<h1>All posts</h1>
+
+<%= @posts.each do |p| %>
+
+	<% if logged_in %>
+		<%= p.user %>
+	<% end %>
+
+	<%= p.title %>
+	<%= p.body %>
+	
+
+<% end %>

@@ -10,5 +10,8 @@
 
   <body>
     <%= yield %>
+    <% if @current_user %>
+    	<%= link_to "Sign out", controller: "sessions", action: "delete", :method => :delete %>
+    <% end %>
   </body>
 </html>
